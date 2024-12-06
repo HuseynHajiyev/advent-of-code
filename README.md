@@ -5,7 +5,7 @@
 
 <p>Advent of Code is an Advent calendar of small programming puzzles for a variety of skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other.</p>
 
-<p>If you'd like to join Advent of Code, you can do so by visiting <a href="https://adventofcode.com"></p>
+<p>If you'd like to join Advent of Code, you can do so by visiting the <a href="https://adventofcode.com">AoC website</a> </p>
 
 <h3>Project Setup ⚙️</h3>
 <p>This repository consists of a <strong>Bun</strong> TypeScript project with:</p>
