@@ -19,9 +19,10 @@ export async function solution(day: number): Promise<void> {
         `Default export for solution_day_${day}.ts is not a function.`
       );
     }
-
-    const result = solverModule.default(input);
-    console.log(`Solution for Day ${day}:`, result);
+    const result_a = solverModule.default(input, "a");
+    const result_b = solverModule.default(input, "b");
+    console.log(`Solution for Day ${day}, Part a: ${result_a}`);
+    console.log(`Solution for Day ${day}, Part b: ${result_b}`);
   } catch (error: any) {
     console.error(`Failed to run solution for Day ${day}: ${error.message}`);
   }

@@ -57,7 +57,7 @@ async function handleDaySelection(day: number): Promise<void> {
   if (inputFileExists(day)) {
     spinner.success({ text: `Input file for Day ${day} found.` });
     console.log(chalk.green(`Running solution for Day ${day}...`));
-    solution(day); // Call the solution function
+    solution(day);
   } else {
     spinner.error({ text: `Input file for Day ${day} not found.` });
     console.log(
