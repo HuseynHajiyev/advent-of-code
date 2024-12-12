@@ -1,7 +1,36 @@
-export default function solution_day_1(input: string) {
+export default function solutions_day_1(
+  input: string,
+  part: "a" | "b"
+): number | "not ready yet" {
+  switch (part) {
+    case "a":
+      return solution_day_1a(input);
+    case "b":
+      return solution_day_1b(input);
+  }
+}
+
+function solution_day_1a(input: string): number {
   const inputs = parseInput_solution_1(input);
   const sorted_arrays = [sort_array(inputs[0]), sort_array(inputs[1])];
   return find_difference(sorted_arrays);
+}
+
+function solution_day_1b(input: string): number {
+  const inputs = parseInput_solution_1(input);
+  const leftDict: { [key: number]: number } = {};
+  let sum = 0;
+  for (let i = 0; i < inputs[0].length; i++) {
+    leftDict[inputs[0][i]] = leftDict[inputs[0][i]]
+      ? leftDict[inputs[0][i]] + 1
+      : 1;
+  }
+
+  sum = 0;
+  for (let input of inputs[1]) {
+    if (input in leftDict) sum += leftDict[input] * input;
+  }
+  return sum;
 }
 
 function parseInput_solution_1(input: string): number[][] {

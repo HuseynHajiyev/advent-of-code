@@ -8,5 +8,15 @@ test("solution_day_1", () => {
 1   3
 3   9
 3   3`;
-  expect(solution_day_1(input)).toBe(11);
+  expect(solution_day_1(input, "a")).toBe(11);
+});
+
+test("solution_day_1b", () => {
+  const input = `3   4
+4   3
+2   5
+1   3
+3   9
+3   3`;
+  expect(solution_day_1(input, "b")).toBe(31);
 });
